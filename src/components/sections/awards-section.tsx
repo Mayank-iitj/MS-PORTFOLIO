@@ -9,13 +9,6 @@ import { useAnimatedCounter } from '@/hooks/use-animated-counter';
 const achievementsData = [
   {
     date: "2024",
-    category: "Current", 
-    title: "B.Tech Computer Science Engineering",
-    description: "Indian Institute of Technology (IIT) Jodhpur - Pursuing Bachelor's degree in Computer Science with focus on AI/ML and Software Engineering.",
-    highlight: true,
-  },
-  {
-    date: "2024",
     category: "Healthcare AI",
     title: "CardioDetect - Medical AI Platform",
     description: "Developed advanced ML algorithms for cancer detection through heartbeat analysis, achieving high accuracy in early medical diagnosis.",
@@ -23,7 +16,7 @@ const achievementsData = [
   },
   {
     date: "2024",
-    category: "Enterprise Solutions",
+    category: "Enterprise Solutions", 
     title: "Workforce Management System",
     description: "Built comprehensive attendance, salary, PF & performance tracking system with real-time monitoring and automated payroll processing.",
     highlight: false,
@@ -148,7 +141,7 @@ const AwardsSection = () => {
 
   return (
     <motion.section 
-      id="awards-section" 
+      id="achievements-section" 
       className="bg-background py-[60px] md:py-[120px] relative overflow-hidden"
       ref={sectionAnimation.ref}
       initial={{ opacity: 0 }}
@@ -198,7 +191,7 @@ const AwardsSection = () => {
             }}
             transition={{ duration: 0.2 }}
           >
-            (ACHIEVEMENTS & EDUCATION)
+            (ACHIEVEMENTS)
             {/* Animated underline */}
             <motion.div
               className="absolute bottom-0 left-0 h-0.5 bg-primary"
@@ -252,36 +245,16 @@ const AwardsSection = () => {
               >
                 {/* Timeline dot */}
                 <motion.div 
-                  className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                    achievement.highlight 
-                      ? 'bg-gradient-to-br from-primary to-orange-500' 
-                      : 'bg-primary'
-                  }`}
+                  className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 bg-primary"
                   whileHover={{ 
                     scale: 1.2,
                     boxShadow: '0 4px 15px rgba(255, 58, 0, 0.4)',
                   }}
                   transition={{ duration: 0.3 }}
-                >
-                  {achievement.highlight && (
-                    <motion.div
-                      className="w-3 h-3 bg-white rounded-full"
-                      animate={{
-                        scale: [1, 1.2, 1],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    />
-                  )}
-                </motion.div>
+                />
                 
                 {/* Content */}
-                <div className={`flex-1 p-6 md:p-8 rounded-3xl bg-white/50 backdrop-blur-sm group-hover:bg-white/80 transition-all duration-500 relative overflow-hidden ${
-                  achievement.highlight ? 'border-2 border-primary/20' : ''
-                }`}>
+                <div className="flex-1 p-6 md:p-8 rounded-3xl bg-white/50 backdrop-blur-sm group-hover:bg-white/80 transition-all duration-500 relative overflow-hidden">
                   {/* Gradient overlay on hover */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0"

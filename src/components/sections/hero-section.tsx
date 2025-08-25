@@ -45,7 +45,7 @@ const HeroSection = () => {
   };
 
   const navItems = ["PROJECTS", "ABOUT", "SERVICES"];
-  const brandText = "MAYANK";
+  const brandText = "MAYANK SHARMA";
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -192,7 +192,7 @@ const HeroSection = () => {
                 variants={letterVariants}
               >
                 <motion.h1 
-                  className="text-4xl md:text-6xl lg:text-8xl font-black text-primary relative inline-block"
+                  className="text-3xl md:text-5xl lg:text-6xl font-black text-primary relative inline-block"
                   style={{ y: parallaxY }}
                   whileHover={{ 
                     scale: 1.05,
@@ -200,20 +200,24 @@ const HeroSection = () => {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  {brandText.split('').map((letter, index) => (
-                    <motion.span
-                      key={index}
-                      className="inline-block"
-                      custom={index}
-                      variants={letterVariants}
-                      whileHover={{ 
-                        y: -10,
-                        rotateY: 180,
-                      }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {letter}
-                    </motion.span>
+                  {brandText.split(' ').map((word, wordIndex) => (
+                    <span key={wordIndex} className="inline-block mr-4">
+                      {word.split('').map((letter, letterIndex) => (
+                        <motion.span
+                          key={letterIndex}
+                          className="inline-block"
+                          custom={letterIndex + wordIndex * 10}
+                          variants={letterVariants}
+                          whileHover={{ 
+                            y: -10,
+                            rotateY: 180,
+                          }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {letter}
+                        </motion.span>
+                      ))}
+                    </span>
                   ))}
                   <motion.span
                     className="text-text-primary ml-2"

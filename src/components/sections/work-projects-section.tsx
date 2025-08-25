@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/use-scroll-triggered-animation';
@@ -16,6 +16,7 @@ const projectData = [
     projectUrl: "https://iridescent-rolypoly-782dae.netlify.app/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "GSCC Game Compatibility Checker",
+    isLive: true,
   },
   {
     title: "Tracker Site (Attendance, Salary, PF & Performance)",
@@ -26,6 +27,7 @@ const projectData = [
     projectUrl: "https://wmsms.vercel.app/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Workforce Management System",
+    isLive: true,
   },
   {
     title: "Moody News",
@@ -36,6 +38,7 @@ const projectData = [
     projectUrl: "https://moody-news.vercel.app/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Moody News Platform",
+    isLive: true,
   },
   {
     title: "NEL (Named Entity Linking)",
@@ -46,6 +49,7 @@ const projectData = [
     projectUrl: "https://nel-by-ms.netlify.app/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Named Entity Linking Tool",
+    isLive: true,
   },
   {
     title: "QuantumShield Firewall",
@@ -56,6 +60,7 @@ const projectData = [
     projectUrl: "https://fire-wall.netlify.app/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "QuantumShield Firewall",
+    isLive: true,
   },
   {
     title: "All RounderAPI",
@@ -66,6 +71,7 @@ const projectData = [
     projectUrl: "https://allrounder-api.netlify.app/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "All RounderAPI Generator",
+    isLive: true,
   },
   {
     title: "Traffic Management Wizard",
@@ -76,6 +82,7 @@ const projectData = [
     projectUrl: "https://gregarious-buttercream-270467.netlify.app/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Traffic Management System",
+    isLive: true,
   },
   {
     title: "Text Analyzer Pro",
@@ -86,6 +93,7 @@ const projectData = [
     projectUrl: "https://analyzetex.netlify.app/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Text Analyzer Pro",
+    isLive: true,
   },
   {
     title: "CardioDetect",
@@ -96,6 +104,7 @@ const projectData = [
     projectUrl: "https://dlqmwdpj.manus.space/",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "CardioDetect Healthcare AI",
+    isLive: true,
   },
   {
     title: "Face Mask Detection with Deep Learning",
@@ -103,9 +112,10 @@ const projectData = [
     client: "Healthcare AI",
     duration: "Deep Learning Project",
     description: "Detects mask usage via a MobileNetV2-based computer vision system, capable of real-time video and image classification (with/without mask).",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=Face Mask Detection Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Face Mask Detection AI",
+    isLive: false,
   },
   {
     title: "Customer Churn Prediction",
@@ -113,9 +123,10 @@ const projectData = [
     client: "Telecom Analytics",
     duration: "ML Pipeline",
     description: "An end-to-end ML pipeline for predicting telecom customer churn, using Random Forest and XGBoost to reach over 85% accuracy, delivering actionable churn insights.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=Customer Churn Prediction Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Customer Churn Prediction",
+    isLive: false,
   },
   {
     title: "Music Genre Classification",
@@ -123,9 +134,10 @@ const projectData = [
     client: "Music Technology",
     duration: "CNN/LSTM Project",
     description: "Audio classifier using CNNs/LSTMs on MFCCs to distinguish music genres, deployed as a web app for user input.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=Music Genre Classification Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Music Genre Classification",
+    isLive: false,
   },
   {
     title: "E-Commerce Product Recommendation System",
@@ -133,9 +145,10 @@ const projectData = [
     client: "E-Commerce",
     duration: "Hybrid ML System",
     description: "Hybrid recommender (collaborative + content-based filtering) that improves user engagement by suggesting products based on user history and product features.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=Product Recommendation System Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Product Recommendation System",
+    isLive: false,
   },
   {
     title: "Sentiment Analysis on Social Media",
@@ -143,9 +156,10 @@ const projectData = [
     client: "Social Media Marketing",
     duration: "BERT Implementation",
     description: "Classifies tweets as positive, negative, or neutral using BERT and visualizes sentiment trends for marketing.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=Sentiment Analysis Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Social Media Sentiment Analysis",
+    isLive: false,
   },
   {
     title: "Spam Mail Analyzer",
@@ -153,9 +167,10 @@ const projectData = [
     client: "Cybersecurity",
     duration: "ML Classification",
     description: "Filters and analyzes potential spam emails, separating threats from normal mail to maintain email security and efficiency.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=Spam Mail Analyzer Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Spam Mail Analyzer",
+    isLive: false,
   },
   {
     title: "SmartCity IoT",
@@ -163,9 +178,10 @@ const projectData = [
     client: "Urban Development",
     duration: "IoT Integration",
     description: "(Optimized for PC) Integrates IoT devices into urban infrastructure to optimize resource management, decision making, and sustainable development for smart cities.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=SmartCity IoT Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "SmartCity IoT Platform",
+    isLive: false,
   },
   {
     title: "Life Goal Unleashed (Life Pattern Analyzer)",
@@ -173,9 +189,10 @@ const projectData = [
     client: "Wellness Technology",
     duration: "Analytics Platform",
     description: "Analyzes daily habits and life patterns to offer insights for personal growth, productivity, and well-being improvement.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=Life Pattern Analyzer Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "Life Pattern Analyzer",
+    isLive: false,
   },
   {
     title: "SocialStarX",
@@ -183,9 +200,10 @@ const projectData = [
     client: "Digital Marketing",
     duration: "Automation Platform",
     description: "Social media automation tool for post scheduling, analytics, and multi-account management to streamline digital presence.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=SocialStarX Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "SocialStarX Platform",
+    isLive: false,
   },
   {
     title: "ReactNative",
@@ -193,9 +211,10 @@ const projectData = [
     client: "Cross-Platform Apps",
     duration: "Framework Implementation",
     description: "Cross-platform mobile app framework leveraging JavaScript and React for high-performance, native-like applications.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=ReactNative Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "ReactNative Development",
+    isLive: false,
   },
   {
     title: "X Analytics",
@@ -203,9 +222,10 @@ const projectData = [
     client: "Business Intelligence",
     duration: "Analytics Platform",
     description: "Market analysis platform providing detailed insights, trends, and actionable intelligence for informed decision making.",
-    projectUrl: "#",
+    projectUrl: "mailto:ms1591934@gmail.com?subject=X Analytics Project Inquiry",
     imageUrl: "/api/placeholder/600/340",
     imageAlt: "X Analytics Platform",
+    isLive: false,
   },
 ];
 
@@ -299,7 +319,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                 <DetailRow label="Type" value={project.duration} />
               </div>
               <div className="mt-10">
-                <Link href={project.projectUrl} target="_blank" rel="noopener noreferrer">
+                <Link href={project.projectUrl} target={project.isLive ? "_blank" : "_self"} rel="noopener noreferrer">
                   <motion.div 
                     className="inline-flex items-center gap-4 rounded-full bg-white px-6 py-4 shadow-sm relative overflow-hidden cursor-pointer"
                     whileHover={{ 
@@ -322,13 +342,17 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                       whileHover={{ color: '#ff3a00' }}
                       transition={{ duration: 0.2 }}
                     >
-                      View Project
+                      {project.isLive ? "View Project" : "Get in Touch"}
                     </motion.p>
                     <motion.div
-                      whileHover={{ x: 5, rotate: -45 }}
+                      whileHover={{ x: 5, rotate: project.isLive ? -45 : 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <ExternalLink className="h-4 w-4 text-text-primary group-hover:text-primary transition-colors duration-300" />
+                      {project.isLive ? (
+                        <ExternalLink className="h-4 w-4 text-text-primary group-hover:text-primary transition-colors duration-300" />
+                      ) : (
+                        <Clock className="h-4 w-4 text-text-primary group-hover:text-primary transition-colors duration-300" />
+                      )}
                     </motion.div>
                   </motion.div>
                 </Link>
@@ -348,6 +372,16 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               >
                 {index + 1}
               </motion.div>
+              {!project.isLive && (
+                <motion.div
+                  className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  Contact for Demo
+                </motion.div>
+              )}
             </motion.div>
           </div>
         </div>

@@ -38,7 +38,7 @@ const FooterSection = () => {
                 </div>
                 <div className="text-sm text-muted-foreground">
                   <p>
-                    © 2025 Mayank Singh
+                    © 2025 Mayank Sharma
                   </p>
                   <p className="mt-1">
                     Full-Stack Developer & AI/ML Engineer
@@ -47,8 +47,8 @@ const FooterSection = () => {
               </div>
             </div>
             <div className="mt-24 w-full">
-              <h1 className="text-primary text-[60px] sm:text-[80px] md:text-[120px] font-black leading-[0.8] tracking-tighter break-words">
-                MAYANK®
+              <h1 className="text-primary text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] font-black leading-[0.8] tracking-tighter break-words">
+                MAYANK SHARMA®
               </h1>
             </div>
           </div>

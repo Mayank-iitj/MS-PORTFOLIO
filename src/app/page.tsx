@@ -4,6 +4,8 @@ import MoreProjectsCta from '@/components/sections/more-projects-cta';
 import AboutUsSection from '@/components/sections/about-us-section';
 import TeamCarouselSection from '@/components/sections/team-carousel-section';
 import AwardsSection from '@/components/sections/awards-section';
+import { Education } from '@/components/sections/education-section';
+import SkillsSection from '@/components/sections/skills-section';
 import ServicesSection from '@/components/sections/services-section';
 import FooterSection from '@/components/sections/footer-section';
 import { PageTransition, SectionReveal } from '@/components/page-transition';
@@ -34,11 +36,19 @@ export default function HomePage() {
         </SectionReveal>
         
         <SectionReveal delay={0.2}>
-          <TeamCarouselSection />
+          <Education />
         </SectionReveal>
         
         <SectionReveal delay={0.1}>
           <AwardsSection />
+        </SectionReveal>
+        
+        <SectionReveal delay={0.2}>
+          <SkillsSection />
+        </SectionReveal>
+        
+        <SectionReveal delay={0.2}>
+          <TeamCarouselSection />
         </SectionReveal>
         
         <SectionReveal delay={0.2}>
