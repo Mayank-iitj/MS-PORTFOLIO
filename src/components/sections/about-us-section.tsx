@@ -140,7 +140,7 @@ const AboutUsSection = () => {
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.2 }}
                 >
-                  Mayank Singh
+                  MAYANK SHARMA
                 </motion.span>, a passionate Full-Stack Developer and AI/ML Engineer from IIT Jodhpur. I specialize in creating innovative digital solutions that bridge the gap between cutting-edge technology and user-centered design.
               </motion.p>
               
